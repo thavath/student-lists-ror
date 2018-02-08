@@ -1,0 +1,21 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  namess: MyString
+  typess: MyString
+  sending: MyString
+  entry: 2018-02-02
+  gojapan: 2018-02-02
+  levels: 2018-02-02
+  age: 1
+  workfeild: MyString
+
+two:
+  namess: MyString
+  typess: MyString
+  sending: MyString
+  entry: 2018-02-02
+  gojapan: 2018-02-02
+  levels: 2018-02-02
+  age: 1
+  workfeild: MyString

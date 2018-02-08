@@ -1,0 +1,49 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  namejp: MyString
+  sex: MyString
+  types: MyString
+  company: MyString
+  level: MyString
+  dayofbirth: 2018-02-01
+  age: 1
+  work: MyString
+  datego: 2018-02-01
+  dateinput: 2018-02-01
+  nationality: MyString
+  zipcode: 1
+  prefecture: MyString
+  city: MyString
+  building: MyString
+  telephone: MyString
+  education: MyString
+  email: MyString
+  remail: MyString
+  pas: MyString
+  pass: MyString
+
+two:
+  name: MyString
+  namejp: MyString
+  sex: MyString
+  types: MyString
+  company: MyString
+  level: MyString
+  dayofbirth: 2018-02-01
+  age: 1
+  work: MyString
+  datego: 2018-02-01
+  dateinput: 2018-02-01
+  nationality: MyString
+  zipcode: 1
+  prefecture: MyString
+  city: MyString
+  building: MyString
+  telephone: MyString
+  education: MyString
+  email: MyString
+  remail: MyString
+  pas: MyString
+  pass: MyString

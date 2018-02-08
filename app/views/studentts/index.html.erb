@@ -1,0 +1,87 @@
+
+<h1>Listing in Detail of Students</h1>
+<div>
+<%= form_tag studentts_path, :method => 'get' do %>
+  <p>
+    <%= text_field_tag :search, params[:search] , placeholder: 'Type name of student', style: 'width: 400px;border: 1px solid blue; padding: 5px; border-radius: 5px;'%>
+    <%= submit_tag "Search" , class: 'btn btn-primary' %>
+  </p>
+  <%= link_to 'Advance Search', new_search_path %>
+<% end %>
+
+</div><br><br>
+<div class="table-responsive">
+<table class="table table-hover">
+  <thead style="background-color: #0000b3; color: #FFF; font-weight: bold">
+    <tr>
+      <th>Full_Name</th>
+      <th>Japanese_Name</th>
+      <th>Sex</th>
+      <th>Type_of_Company</th>
+      <th>Company</th>
+      <th>Level</th>
+      <th>Day_Of_Birth(DOB)</th>
+      <th>Age</th>
+      <th>Work</th>
+      <th>Date_Going_Japan</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @studentts.each do |studentt| %>
+      <tr>
+        <td><%= studentt.name %></td>
+        <td><%= studentt.namejp %></td>
+        <td><%= studentt.sex %></td>
+        <td><%= studentt.types %></td>
+        <td><%= studentt.company %></td>
+        <td><%= studentt.level %></td>
+        <td><%= studentt.dayofbirth.to_formatted_s(:long) %></td>
+        <td><%= studentt.age %></td>
+        <td><%= studentt.work %></td>
+        <td><%= studentt.datego.to_formatted_s(:long) %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<table class="table table-hover">
+  <thead style="background-color: #0000b3; color: #FFF; font-weight: bold">
+    <tr>
+      <th>Date_Entry_Data</th>
+      <th>Nationality</th>
+      <th>Zip_Code</th>
+      <th>Prefecture</th>
+      <th>City_Address</th>
+      <th>Building_Address</th>
+      <th>Tele_Phone</th>
+      <th>Education_Field</th>
+      <th>Email_Contact</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @studentts.each do |studentt| %>
+      <tr>
+        <td><%= studentt.dateinput.to_formatted_s(:long) %></td>
+        <td><%= studentt.nationality %></td>
+        <td><%= studentt.zipcode %></td>
+        <td><%= studentt.prefecture %></td>
+        <td><%= studentt.city %></td>
+        <td><%= studentt.building %></td>
+        <td><%= studentt.telephone %></td>
+        <td><%= studentt.education %></td>
+        <td><%= studentt.email %></td>
+        <td><%= link_to 'Show', studentt, class:'btn btn-xs btn-success' %></td>
+        <td><%= link_to 'Edit', edit_studentt_path(studentt), class:'btn btn-xs btn-primary' %></td>
+        <td><%= link_to 'Destroy', studentt, method: :delete, data: { confirm: 'Are you sure?' }, class:'btn btn-xs btn-danger' %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+</div>
+
+<br>
+
+<%= link_to 'New Student', new_studentt_path , class:'btn btn-primary'%>

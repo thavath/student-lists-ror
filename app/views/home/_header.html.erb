@@ -1,0 +1,33 @@
+<div style="border-bottom: 4px solid #b30000; border-top: 4px solid #b30000;">
+    <div style="margin-left: 200px; margin-top: 5px;">
+      <%= image_tag("site_id.gif", width: '20%') %>
+    </div>
+    <div style="margin-left: 60px;margin-right: 60px; margin-buttom: -10px;margin-top: -20px; ">
+        <%= image_tag("topimage2.png", width: '100%') %>
+    </div>
+<nav class="navbar navbar-default" style="bottom: -15px;">
+  <div class="container-fluid">
+      <div class="container" style= "padding-left: 20px;  font-weight: bold;">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <%= link_to 'Work in Asia', root_path, class:'navbar-brand', style: 'color: #b30000' %>
+    </div>
+
+      <ul class="nav navbar-nav navbar-right">
+        <li><%= link_to '>Home', root_path %></li>
+        <li><%= link_to '>Contact Us', home_about_path %></li>
+        <% if user_signed_in? %>
+          <li><%= link_to '>Add Student', new_studentt_path  %></li>
+          <li><%= link_to '>List Student', studentts_path %></li>
+          <li><%= link_to '>Log Off', destroy_user_session_path, method: :delete %></li>
+          <li><%= link_to '>Edit Profile', edit_user_registration_path %></li>   
+        <% else %>
+          <li><%= link_to '>Login', new_user_session_path %></li>
+          <li><%= link_to '>Sign Up', new_user_registration_path %></li>
+        <% end %>
+      </ul>
+    </div><!-- /.navbar-collapse -->
+    </div>  
+  </div><!-- /.container-fluid -->
+</nav>
+</div>

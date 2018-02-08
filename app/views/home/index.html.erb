@@ -1,0 +1,12 @@
+<div class="jumbotron center";>
+    <h1>Welcome To My First Templete</h1>
+    <p>Please Find me in app/views/home/index.html.erb</p>
+    
+    <% if user_signed_in? %>
+          <%= link_to 'Log Off', destroy_user_session_path, method: :delete, class:'btn btn-primary' %>
+          <%= link_to 'Edit Profile', edit_user_registration_path , class: 'btn btn-default'%>
+    <% else %>
+            <%= link_to 'Login', new_user_session_path, class: 'btn btn-default' %>
+            <%= link_to 'Join', new_user_registration_path, class: 'btn btn-primary' %>
+    <% end %>
+</div>

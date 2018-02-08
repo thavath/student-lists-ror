@@ -1,0 +1,35 @@
+<h2>Advance search result</h2>
+<%= link_to 'List Student', studentts_path %><br>
+<%= link_to 'Back to advance search', new_search_path %><br>
+
+<% if @search.search_student.empty? %>
+
+    <p> Search not found</p>
+<% else %>
+
+    <%= @search.search_student.each do |c| %>
+    <br>
+    <div class="div">
+        <p><strong>Name:</strong><%= c.name %></p>
+        <p><strong>Name_Jp:</strong><%= c.namejp %></p>
+        <p><strong>Sex:</strong><%= c.sex %></p>
+        <p><strong>Types:</strong><%= c.types %></p>
+        <p><strong>Company:</strong><%= c.company %></p>
+        <p><strong>Japanese Level:</strong><%= c.level %></p>
+        <p><strong>Dayo Of birth:</strong><%= c.dayofbirth %></p>
+        <p><strong>Age:</strong><%= c.age %></p>
+        <p><strong>Working Feild:</strong><%= c.work %></p>
+        <p><strong>Date Go To Japanese:</strong><%= c.datego %></p>
+        <p><strong>Date Entry Date:</strong><%= c.dateinput %></p>
+        <p><strong>Nationality:</strong><%= c.nationality %></p>
+        <p><strong>Zip_Code:</strong><%= c.zipcode %></p>
+        <p><strong>Prefecture:</strong><%= c.prefecture %></p>
+        <p><strong>City:</strong><%= c.city %></p>
+        <p><strong>Building:</strong><%= c.building %></p>
+        <p><strong>Tele_Phone:</strong><%= c.telephone %></p>
+        <p><strong>Education:</strong><%= c.education %></p>
+        <p><strong>Email:</strong><%= c.email %></p>
+        <p><strong>Password:</strong><%= c.pas %></p>
+    </div>
+    <% end %>
+<% end %>    

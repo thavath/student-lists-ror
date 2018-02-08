@@ -1,0 +1,47 @@
+<h1>Advance Search</h1>
+
+<%= form_for (@search) do |f| %>
+    
+    <div class="field"> 
+        <%= f.label :namess, :value => 'Keywords' %><br>
+        <%= f.text_field :namess, autofocus: true %>
+    </div>
+    
+    <div class="field"> 
+        <%= f.label :typess , 'Type Of Study'%><br>
+        <%= f.text_field :typess %>
+    </div>
+    
+    <div class="field"> 
+        <%= f.label :sending, :value => 'Company Sending Name' %><br>
+        <%= select_tag :sending, options_for_select(["Company Name","168 Company", "CL Supply Company", "Other Company"]) %>
+    </div>
+    
+    <div class="field">
+        <%= f.label :entry , :value => 'Date Entry Data'%><br>
+        <%= f.date_select :entry %>
+    </div>
+    
+    
+    <div class="field">
+        <%= f.label :gojapan , :value => 'Date Go To Japan' %><br>
+        <%= f.date_select :gojapan %>
+    </div>
+    
+    <div class="field">
+        <%= f.label :levels, :value => 'Level of Study' %><br>
+        <%= select_tag :levels , options_for_select(["----Japanese Level----","N5","N4","N3","N2",  "Japanese Level" ]) %>
+    </div>
+    <div class="field">
+        <%= f.label :age %><br>
+        <%= f.number_field :age %>
+    </div>
+    <div class="field">
+        <%= f.label :workfeild, :value => 'Type of Work in Japan' %><br>
+        <%= f.text_field :workfeild %><br><br>
+    </div>
+    <div class="actions">
+    <%= f.submit "Submit", class: 'btn btn-sm btn-success' %>
+    </div>
+<% end %><br>
+<p> <%= link_to 'List of Student', studentts_path, class:'btn btn-sm btn-primary' %></p>
